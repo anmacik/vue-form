@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script src="/scripts/index.js"></script>
+</head>
+<body>
+<form class="review-form" @submit.prevent="onSubmit">
+  <p>
+    <label for="surname">Фамилия:</label>
+    <input id="surname" v-model="surname" placeholder="Иванов">
+  </p>
+    <p>
+    <label for="name">Имя:</label>
+    <input id="name" v-model="name" placeholder="Иван">
+  </p>
+    <p>
+    <label for="patronymic">Отчество:</label>
+    <input id="patronymic" v-model="patronymic" placeholder="Иванович">
+  </p>
+      <p>
+    <label for="birth-date">Дата рождения</label>
+    <input id="birth-date" v-model="birth-date" placeholder="01/01/1991">
+  </p>
+      <p>
+    <label for="phone-number">Номер телефона</label>
+    <input id="phone-number" v-model="phone-number" placeholder="+12345678900">
+  </p>
+        <p>
+    <label for="sex">Пол:</label>
+    <input id="sex" v-model="sex" placeholder="t-34">
+  </p>
+ <p>
+    <label for="client-group">Группа клиентов:</label>
+    <select id="client-group" v-model.number="client-group">
+      <option>VIP</option>
+      <option>Проблемные</option>
+      <option>ОМС</option>
+    </select>
+  </p>
+   <p>
+    <label for="doctor">Лечащий врач:</label>
+    <select id="doctor" v-model.number="">
+      <option>Иванов</option>
+      <option>Захаров</option>
+      <option>Чернышева</option>
+    </select>
+  </p>
+  <input type="checkbox" id="checkbox-sms" v-model="checked">
+<label for="checkbox-sms">Не отправлять СМС</label>
+ 
+
+  <p>
+    <input type="submit" value="Submit">  
+  </p>
+  <h2>Адрес:</h2>
+   <p>
+    <label for="index">Индекс:</label>
+    <input id="surname" v-model="surname" placeholder="Иванов">
+  </p>
+   <p>
+    <label for="country">Страна:</label>
+    <input id="country" v-model="country" placeholder="Россия">
+  </p>
+
+</form>
+</body>
+<script>
+</script>
+</html>
