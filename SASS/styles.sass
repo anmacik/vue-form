@@ -1,5 +1,71 @@
 ---
 ---
   
-body
-  background-color: grey
+*
+  font-family: sans-serif
+  box-sizing: border-box
+
+input
+  border: 2px solid grey
+  border-radius: 6px
+  background: white
+  padding: 5px 10px
+
+  &:focus
+    border: 2px solid #4E4D5C
+    border-radius: 6px
+    outline: none
+
+select
+  height: 30px
+  border: 2px solid grey
+  border-radius: 6px
+  background: white
+  padding: 5px 10px
+
+  &:focus
+    border: 2px solid #4E4D5C
+    border-radius: 6px
+    outline: none
+
+.registration-form
+  display: flex
+  flex-direction: column
+  row-gap: 10px
+  width: 600px
+  border: 2px solid grey
+  border-radius: 15px
+  padding: 20px
+  background-color: #9fcad4
+
+.checkbox__wrapper
+  display: flex
+  flex-direction: column
+  height: 40px
+
+#checkbox_sms
+  transform: scale(1.5)
+  font-size: 20px
+
+button[type="submit"]
+  border-radius: 5px
+  width: 200px
+  height: 45px
+  align-self: center
+
+.registration-form > label
+  text-align: center
+
+.dirty
+  border-color: #5A5
+  background: #EFE
+
+  &:focus
+    outline-color: #8E8
+
+.error
+  border-color: red
+  background: #FDD
+
+  &:focus
+    outline-color: #F99
