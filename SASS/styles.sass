@@ -1,71 +1,109 @@
 ---
 ---
   
-*
-  font-family: sans-serif
-  box-sizing: border-box
+ body {
+  background-color: #718087;
+}
 
-input
-  border: 2px solid grey
-  border-radius: 6px
-  background: white
-  padding: 5px 10px
-  width:100%
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  &:focus
-    border: 2px solid #4E4D5C
-    border-radius: 6px
-    outline: none
+  .game__content {
+    background-color: #3f3838;
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 
-select
-  height: 30px
-  border: 2px solid grey
-  border-radius: 6px
-  background: white
-  padding: 5px 10px
+    .game__item {
+      cursor: pointer;
+      border: 3px solid #3f3838;
 
-  &:focus
-    border: 2px solid #4E4D5C
-    border-radius: 6px
-    outline: none
+      &:hover {
+        opacity: 0.6;
+      }
+    }
 
-.registration-form
-  display: flex
-  flex-direction: column
-  row-gap: 10px
-  width: 600px
-  border: 2px solid grey
-  border-radius: 15px
-  padding: 20px
-  background-color: #9fcad4
-  
-  &laber 
-    text-align: center
+    .game__item_1 {
+      background-color: #2525aa;
 
-.checkbox__wrapper
-  display: flex
-  flex-direction: row
-  height: 40px
+      &.lighted {
+        background: #6f6fe0;
+      }
+    }
 
-#checkbox_sms
-  transform: scale(1.5)
+    .game__item_2 {
+      background-color: #aa2525;
 
-button[type="submit"]
-  border-radius: 5px
-  width: 200px
-  height: 45px
-  align-self: center
+      &.lighted {
+        background: #e06f6f;
+      }
+    }
 
-.dirty
-  border-color: #5A5
-  background: #EFE
+    .game__item_3 {
+      background-color: #aaaa25;
 
-  &:focus
-    outline-color: #8E8
+      &.lighted {
+        background: #e0e06f;
+      }
+    }
 
-.error
-  border-color: red
-  background: #FDD
+    .game__item_4 {
+      background-color: #45aa25;
 
-  &:focus
-    outline-color: #F99
+      &.lighted {
+        background: #8ae06f;
+      }
+    }
+  }
+
+  .game__start-btn {
+    background-color: #c5bbbb;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    &:hover {
+      background-color: #b8aeae;
+    }
+  }
+
+  .game__mode {
+    background-color: #394432;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+
+    p {
+      text-align: center;
+      color: #f2f2f2;
+      font-size: 18px;
+      margin-top: 0;
+    }
+
+    button {
+      cursor: pointer;
+      background-color: #b1dbc4;
+      font-size: 14px;
+      letter-spacing: 1px;
+      padding: 7px;
+
+      &.active {
+        background: #45aa25;
+      }
+
+      + button {
+        margin-left: 10px;
+      }
+    }
+  }
+}
